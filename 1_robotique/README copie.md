@@ -14,7 +14,7 @@ TESTE OBJECTIFS
 - va attraper l'objet avec la pince
 - va ramenez l'objet à la position A
 
---
+
 Partie libre
 --
 exemples: une dance, un lightshow, de la musique, fight, etc...
