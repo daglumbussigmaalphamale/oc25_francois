@@ -16,3 +16,11 @@ while True:
     trigger.write_digital(0)
     distance = time_pulse_us(echo, 1)/2e6*340
     display.scroll(str(round(distance)))
+    
+    # suivre une ligne
+    if prog == 7:
+        left = pin1.read_analog()
+        right = pin2.read_analog()
+        d = (left - right)
+        d = d // 10
+        robot.move(10 - d, 10 + d)
