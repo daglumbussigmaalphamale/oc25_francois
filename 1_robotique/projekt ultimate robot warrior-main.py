@@ -17,7 +17,7 @@ while True:
     distance = time_pulse_us(echo, 1)/2e6*340
     display.scroll(str(round(distance)))
     
-    # suivre une ligne
+    # suivre une lignee
     if prog == 7:
         left = pin1.read_analog()
         right = pin2.read_analog()
