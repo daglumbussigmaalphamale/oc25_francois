@@ -302,7 +302,8 @@ while True:
             robot.move(0, 0)
             set_all(red)
         elif msg == 'u':
-            mission_A_to_B_pick_and_return()
+            mission_A_to_B_pick_and_return()-
+            robot.move(190,-190, 1200°)
         # Petit blink pour montrer l’attente
         blink(0, 600, 120, blue, black)
         sleep(5)
