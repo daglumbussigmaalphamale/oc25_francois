@@ -1,5 +1,43 @@
-[gd_scene format=3 uid="uid://bcupgufeki1ke"]
+[gd_scene load_steps=8 format=3 uid="uid://bcupgufeki1ke"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xowi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+material = SubResource("StandardMaterial3D_4xowi")
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noarx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0tk4"]
+material = SubResource("StandardMaterial3D_noarx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_jka67"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_i5arm"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.51, 0)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.506277, 0)
+mesh = SubResource("BoxMesh_a0tk4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35391, 0.471553, -1.05784)
+material_override = SubResource("StandardMaterial3D_r3fl7")
+mesh = SubResource("SphereMesh_jka67")
+surface_material_override/0 = SubResource("ORMMaterial3D_i5arm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.259379, -0.49623, -0.82854, 0.94562, 0.0438638, -0.322302, 0.196279, -0.867082, 0.457868, -1.76541, 1.39819, -0.296081)
+light_color = Color(1, 0, 1, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.296525, 0.955025, 0, -0.955025, -0.296525, 2.02117, 1.86088, -2.23135)
